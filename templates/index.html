@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>DND Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="https://www.zomato.com/images/logo/zomato_favicon3.png" />
+    <script>
+    var x=document.forms[0].elements['id_remarks'].value;
+    if(!x){} else {}
+    </script>
+  </head>
+
+  <body>
+  <form method="get" id="form">
+  Please Enter your phone number : <br/><br/>
+  <input type="text" name="phone_number">
+  <br>
+  </form>
+  <br/>
+  <button type="submit" form="form" value="Submit" onclick="verify()">Submit</button>
+  <table>
+    {% for n in data %}  
+    <tr>
+    <td>{{n['phone_number']}}</td>
+    <td>{{n['dnd_status']}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+  </body>
+
+</html>
