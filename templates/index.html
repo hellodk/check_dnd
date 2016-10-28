@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" type="image/png" href="https://www.zomato.com/images/logo/zomato_favicon3.png" />
     <script>
-    var x=document.forms[0].elements['id_remarks'].value;
-    if(!x){} else {}
+    // var x=document.forms[0].elements['id_remarks'].value;
+    // if(!x){} else {}
+    
     </script>
   </head>
 
@@ -23,15 +24,20 @@
   <br>
   </form>
   <br/>
-  <button type="submit" form="form" value="Submit" onclick="verify()">Submit</button>
-  <table>
+  <button type="submit" form="form" value="Submit" >Submit</button>
+  {% if data %}
+    Data is : {{ data }}
+  {% endif %}
+
+ <!--  <table>
     {% for n in data %}  
     <tr>
     <td>{{n['phone_number']}}</td>
     <td>{{n['dnd_status']}}</td>
     </tr>
     {% endfor %}
-    </table>
+  </table> -->
+
   </body>
 
 </html>
